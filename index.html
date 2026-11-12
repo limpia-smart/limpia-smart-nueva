@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Limpia Smart</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #24364b;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: white;
+    text-align: center;
+    padding: 35px 20px 25px;
+}
+
+.logo {
+    width: 150px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+}
+
+header h1 {
+    color: #087ac1;
+    font-size: 36px;
+    margin: 12px 0 5px;
+}
+
+header p {
+    color: #52677d;
+    font-size: 17px;
+    margin: 7px;
+}
+
+.slogan {
+    color: #087ac1;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* MENÚ */
+
+nav {
+    background: #087ac1;
+    padding: 16px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* INICIO */
+
+.inicio {
+    background: linear-gradient(#e1f2ff, #f4f8fc);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.inicio h2 {
+    color: #087ac1;
+    font-size: 32px;
+}
+
+.inicio p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    color: #52677d;
+}
+
+.boton {
+    display: inline-block;
+    background: #087ac1;
+    color: white;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background: #045b91;
+}
+
+/* SECCIONES */
+
+.seccion {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: #087ac1;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* CATÁLOGO */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.producto {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px #00000012;
+    border: 1px solid #e1edf7;
+}
+
+.producto:hover {
+    transform: translateY(-3px);
+}
+
+.foto {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f4f8fc;
+}
+
+.producto h3 {
+    color: #087ac1;
+    font-size: 21px;
+}
+
+.producto p {
+    line-height: 1.5;
+    color: #52677d;
+}
+
+.precio {
+    color: #087ac1 !important;
+    font-size: 23px !important;
+    font-weight: bold;
+}
+
+/* INGREDIENTES */
+
+.ingredientes {
+    background: #eaf6ff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 18px;
+    text-align: left;
+}
+
+.ingredientes h4 {
+    color: #087ac1;
+    margin-top: 0;
+}
+
+.ingredientes ul {
+    margin-bottom: 0;
+}
+
+.ingredientes li {
+    margin: 7px 0;
+}
+
+/* CONÓCENOS */
+
+.conocenos {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 4px 15px #00000012;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.conocenos h3 {
+    color: #087ac1;
+}
+
+/* PEDIDO */
+
+.pedido {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+.pedido label {
+    font-weight: bold;
+    color: #24364b;
+}
+
+.pedido input,
+.pedido select,
+.pedido textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0 18px;
+    border: 1px solid #b9d5e8;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.pedido textarea {
+    resize: vertical;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: #e1f2ff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contacto h2 {
+    color: #087ac1;
+}
+
+/* PIE */
+
+footer {
+    background: #087ac1;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .inicio h2 {
+        font-size: 26px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+    }
+
+    .seccion {
+        padding: 40px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+
+<img src="logo.jpg"
+alt="Logo de Limpia Smart"
+class="logo">
+
+<h1>Limpia Smart</h1>
+
+<p>Limpieza y cuidado tecnológico</p>
+
+<p class="slogan">
+Dale nueva vida a tu tecnología
+</p>
+
+</header>
+
+
+<!-- MENÚ -->
+
+<nav>
+
+<a href="#inicio">Inicio</a>
+
+<a href="#catalogo">Ver catálogo</a>
+
+<a href="#conocenos">Conócenos</a>
+
+<a href="#pedido">Hacer pedido</a>
+
+</nav>
+
+
+<!-- INICIO -->
+
+<section class="inicio" id="inicio">
+
+<h2>Cuida tu tecnología con Limpia Smart</h2>
+
+<p>
+Productos diseñados para ayudar a mantener limpias
+y cuidadas las superficies de tus dispositivos tecnológicos.
+</p>
+
+<a href="#catalogo" class="boton">
+Ver catálogo
+</a>
+
+</section>
+
+
+<!-- CATÁLOGO -->
+
+<section class="seccion" id="catalogo">
+
+<h2 class="titulo">
+Nuestro catálogo
+</h2>
+
+
+<div class="productos">
+
+
+<!-- SPRAY PANTALLAS -->
+
+<article class="producto">
+
+<img src="Spray-pantallas.jpg"
+alt="Spray para pantallas"
+class="foto">
+
+<h3>
+Spray para pantallas
+</h3>
+
+<p>
+Aroma Turquoise Oasis.
+</p>
+
+<p class="precio">
+$75 MXN
+</p>
+
+<div class="ingredientes">
+
+<h4>
+Ingredientes
+</h4>
+
+<ul>
+
+<li>Alcohol etílico</li>
+
+<li>Agua destilada</li>
+
+<li>Esencia Turquoise Oasis</li>
+
+</ul>
+
+</div>
+
+<a href="#pedido" class="boton"
+onclick="seleccionarProducto('Spray para pantallas - $75 MXN')">
+Hacer pedido
+</a>
+
+</article>
+
+
+<!-- SPRAY DE MENTA -->
+
+<article class="producto">
+
+<img src="Spray-menta.jpg"
+alt="Spray de menta"
+class="foto">
+
+<h3>
+Spray de menta
+</h3>
+
+<p>
+Aroma fresco de menta.
+</p>
+
+<p class="precio">
+$80 MXN
+</p>
+
+<div class="ingredientes">
+
+<h4>
+Ingredientes
+</h4>
+
+<ul>
+
+<li>Alcohol etílico</li>
+
+<li>Agua destilada</li>
+
+<li>Esencia de menta</li>
+
+</ul>
+
+</div>
+
+<a href="#pedido" class="boton"
+onclick="seleccionarProducto('Spray de menta - $80 MXN')">
+Hacer pedido
+</a>
+
+</article>
+
+
+<!-- SPRAY DE EUCALIPTO -->
+
+<article class="producto">
+
+<div class="foto">
+
+<p style="padding-top:90px;">
+Foto del spray de eucalipto próximamente
+</p>
+
+</div>
+
+<h3>
+Spray de eucalipto
+</h3>
+
+<p>
+Aroma de eucalipto.
+</p>
+
+<p class="precio">
+$80 MXN
+</p>
+
+<div class="ingredientes">
+
+<h4>
+Ingredientes
+</h4>
+
+<ul>
+
+<li>Alcohol etílico</li>
+
+<li>Agua destilada</li>
+
+<li>Esencia de eucalipto</li>
+
+</ul>
+
+</div>
+
+<a href="#pedido" class="boton"
+onclick="seleccionarProducto('Spray de eucalipto - $80 MXN')">
+Hacer pedido
+</a>
+
+</article>
+
+
+<!-- SPRAY MULTIUSO -->
+
+<article class="producto">
+
+<div class="foto">
+
+<p style="padding-top:90px;">
+Foto del spray multiuso próximamente
+</p>
+
+</div>
+
+<h3>
+Spray multiuso tecnológico
+</h3>
+
+<p>
+Aroma por definir.
+</p>
+
+<p class="precio">
+$90 MXN
+</p>
+
+<div class="ingredientes">
+
+<h4>
+Ingredientes
+</h4>
+
+<ul>
+
+<li>Alcohol etílico</li>
+
+<li>Agua destilada</li>
+
+<li>Esencia del aroma elegido</li>
+
+</ul>
+
+</div>
+
+<a href="#pedido" class="boton"
+onclick="seleccionarProducto('Spray multiuso tecnológico - $90 MXN')">
+Hacer pedido
+</a>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- CONÓCENOS -->
+
+<section class="seccion" id="conocenos">
+
+<h2 class="titulo">
+Conócenos
+</h2>
+
+<div class="conocenos">
+
+<h3>
+¿Qué es Limpia Smart?
+</h3>
+
+<p>
+Limpia Smart es una microempresa escolar enfocada en
+el cuidado y limpieza de dispositivos tecnológicos.
+</p>
+
+<p>
+Nuestro objetivo es ofrecer productos prácticos para
+ayudar a mantener limpias diferentes superficies de
+los equipos electrónicos.
+</p>
+
+<p>
+Buscamos combinar el cuidado tecnológico con una
+propuesta sencilla, práctica y accesible.
+</p>
+
+<p>
+<strong>
+Dale nueva vida a tu tecnología.
+</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HACER PEDIDO -->
+
+<section class="seccion" id="pedido">
+
+<h2 class="titulo">
+Hacer pedido
+</h2>
+
+<div class="pedido">
+
+<form onsubmit="enviarPedido(event)">
+
+<label>
+Nombre del cliente:
+</label>
+
+<input
+type="text"
+id="nombre"
+required
+placeholder="Escribe tu nombre">
+
+
+<label>
+Producto:
+</label>
+
+<select id="producto" required>
+
+<option value="">
+Selecciona un producto
+</option>
+
+<option value="Spray para pantallas - $75 MXN">
+Spray para pantallas - $75 MXN
+</option>
+
+<option value="Spray de menta - $80 MXN">
+Spray de menta - $80 MXN
+</option>
+
+<option value="Spray de eucalipto - $80 MXN">
+Spray de eucalipto - $80 MXN
+</option>
+
+<option value="Spray multiuso tecnológico - $90 MXN">
+Spray multiuso tecnológico - $90 MXN
+</option>
+
+</select>
+
+
+<label>
+Cantidad:
+</label>
+
+<input
+type="number"
+id="cantidad"
+min="1"
+value="1"
+required>
+
+
+<label>
+Comentario:
+</label>
+
+<textarea
+id="comentario"
+rows="4"
+placeholder="Escribe algún comentario adicional">
+</textarea>
+
+
+<button
+type="submit"
+class="boton">
+
+Enviar pedido por WhatsApp
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contacto">
+
+<h2>
+¿Tienes alguna duda?
+</h2>
+
+<p>
+Escríbenos directamente por WhatsApp.
+</p>
+
+<a
+class="boton"
+href="https://wa.me/527203553006"
+target="_blank"
+rel="noopener">
+
+Contactar por WhatsApp
+
+</a>
+
+</section>
+
+
+<!-- PIE -->
+
+<footer>
+
+<p>
+Limpia Smart © 2026
+</p>
+
+<p>
+Dale nueva vida a tu tecnología
+</p>
+
+</footer>
+
+
+<script>
+
+function seleccionarProducto(producto) {
+
+document.getElementById("producto").value = producto;
+
+}
+
+function enviarPedido(event) {
+
+event.preventDefault();
+
+var nombre =
+document.getElementById("nombre").value;
+
+var producto =
+document.getElementById("producto").value;
+
+var cantidad =
+document.getElementById("cantidad").value;
+
+var comentario =
+document.getElementById("comentario").value;
+
+if (producto === "") {
+
+alert("Selecciona un producto.");
+
+return;
+
+}
+
+var mensaje =
+"Hola, quiero realizar un pedido de Limpia Smart.\n\n" +
+"Producto: " + producto + "\n" +
+"Nombre: " + nombre + "\n" +
+"Cantidad: " + cantidad + "\n" +
+"Comentario: " + comentario;
+
+var enlace =
+"https://wa.me/527203553006?text=" +
+encodeURIComponent(mensaje);
+
+window.open(enlace, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>
