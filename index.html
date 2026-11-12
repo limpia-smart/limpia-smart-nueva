@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="theme-color" content="#087ac1">
 <title>Limpia Smart</title>
 
 <style>
-
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -20,44 +19,40 @@ body {
     color: #24364b;
 }
 
-/* ENCABEZADO */
-
 header {
     background: white;
     text-align: center;
-    padding: 35px 20px 25px;
+    padding: 30px 15px;
 }
 
 .logo {
     width: 150px;
-    max-width: 80%;
+    max-width: 75%;
+    height: auto;
     display: block;
     margin: auto;
 }
 
 header h1 {
     color: #087ac1;
-    font-size: 36px;
+    font-size: 34px;
     margin: 12px 0 5px;
 }
 
 header p {
     color: #52677d;
-    font-size: 17px;
-    margin: 7px;
+    margin: 8px;
 }
 
 .slogan {
     color: #087ac1;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: bold;
 }
 
-/* MENÚ */
-
 nav {
     background: #087ac1;
-    padding: 16px 10px;
+    padding: 14px 10px;
     text-align: center;
     position: sticky;
     top: 0;
@@ -65,17 +60,16 @@ nav {
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 6px 12px;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
-
-/* INICIO */
 
 .inicio {
     background: linear-gradient(#e1f2ff, #f4f8fc);
@@ -85,7 +79,7 @@ nav a:hover {
 
 .inicio h2 {
     color: #087ac1;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .inicio p {
@@ -95,17 +89,30 @@ nav a:hover {
     color: #52677d;
 }
 
+.seccion {
+    max-width: 1150px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: #087ac1;
+    font-size: 29px;
+    margin-bottom: 35px;
+}
+
 .boton {
     display: inline-block;
     background: #087ac1;
     color: white;
     text-decoration: none;
-    padding: 13px 23px;
-    border-radius: 8px;
-    margin-top: 20px;
+    padding: 12px 20px;
     border: none;
+    border-radius: 8px;
+    margin: 7px 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -113,46 +120,38 @@ nav a:hover {
     background: #045b91;
 }
 
-/* SECCIONES */
-
-.seccion {
-    max-width: 1100px;
-    margin: auto;
-    padding: 55px 20px;
+.boton-secundario {
+    background: #e1f2ff;
+    color: #087ac1;
 }
 
-.titulo {
-    text-align: center;
-    color: #087ac1;
-    font-size: 30px;
-    margin-bottom: 35px;
+.boton-secundario:hover {
+    background: #cce8fa;
 }
 
 /* CATÁLOGO */
 
 .productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
 }
 
 .producto {
     background: white;
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 4px 15px #00000012;
     border: 1px solid #e1edf7;
-}
-
-.producto:hover {
-    transform: translateY(-3px);
+    min-width: 0;
 }
 
 .foto {
     width: 100%;
     height: 230px;
     object-fit: contain;
+    display: block;
     border-radius: 12px;
     background: #f4f8fc;
 }
@@ -160,40 +159,13 @@ nav a:hover {
 .producto h3 {
     color: #087ac1;
     font-size: 21px;
-}
-
-.producto p {
-    line-height: 1.5;
-    color: #52677d;
+    min-height: 48px;
 }
 
 .precio {
-    color: #087ac1 !important;
-    font-size: 23px !important;
-    font-weight: bold;
-}
-
-/* INGREDIENTES */
-
-.ingredientes {
-    background: #eaf6ff;
-    border-radius: 12px;
-    padding: 18px;
-    margin-top: 18px;
-    text-align: left;
-}
-
-.ingredientes h4 {
     color: #087ac1;
-    margin-top: 0;
-}
-
-.ingredientes ul {
-    margin-bottom: 0;
-}
-
-.ingredientes li {
-    margin: 7px 0;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 /* CONÓCENOS */
@@ -201,46 +173,26 @@ nav a:hover {
 .conocenos {
     background: white;
     border-radius: 15px;
-    padding: 35px;
+    padding: 30px;
     box-shadow: 0 4px 15px #00000012;
     line-height: 1.8;
-    text-align: center;
 }
 
 .conocenos h3 {
     color: #087ac1;
 }
 
-/* PEDIDO */
-
-.pedido {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    max-width: 650px;
-    margin: auto;
-    box-shadow: 0 4px 15px #00000012;
+.info-empresa {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
 }
 
-.pedido label {
-    font-weight: bold;
-    color: #24364b;
-}
-
-.pedido input,
-.pedido select,
-.pedido textarea {
-    width: 100%;
-    padding: 13px;
-    margin: 8px 0 18px;
-    border: 1px solid #b9d5e8;
-    border-radius: 7px;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-}
-
-.pedido textarea {
-    resize: vertical;
+.info-empresa article {
+    background: #eaf6ff;
+    padding: 20px;
+    border-radius: 12px;
 }
 
 /* CONTACTO */
@@ -248,524 +200,503 @@ nav a:hover {
 .contacto {
     background: #e1f2ff;
     text-align: center;
-    padding: 50px 20px;
+    padding: 45px 20px;
 }
 
 .contacto h2 {
     color: #087ac1;
 }
 
-/* PIE */
-
 footer {
     background: #087ac1;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 22px;
 }
 
-@media (max-width: 600px) {
+/* VENTANAS EMERGENTES */
 
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(15, 35, 55, 0.65);
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background: white;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 5px 25px #00000030;
+}
+
+.modal-contenido h2 {
+    color: #087ac1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    color: #52677d;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.detalle-imagen {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #f4f8fc;
+    border-radius: 12px;
+}
+
+.pedido label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.pedido input,
+.pedido select,
+.pedido textarea {
+    width: 100%;
+    padding: 13px;
+    margin-top: 7px;
+    border: 1px solid #b9d5e8;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.pedido textarea {
+    resize: vertical;
+}
+
+.pedido button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
     header h1 {
-        font-size: 30px;
+        font-size: 29px;
+    }
+
+    .inicio {
+        padding: 45px 18px;
     }
 
     .inicio h2 {
-        font-size: 26px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px 8px;
+        font-size: 25px;
     }
 
     .seccion {
-        padding: 40px 15px;
+        padding: 38px 13px;
     }
 
-}
+    .productos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
 
+    .producto {
+        padding: 18px;
+    }
+
+    .foto {
+        height: 240px;
+    }
+
+    .info-empresa {
+        grid-template-columns: 1fr;
+    }
+
+    .conocenos {
+        padding: 22px;
+    }
+
+    nav {
+        padding: 9px 5px;
+    }
+
+    nav a {
+        margin: 6px 7px;
+        font-size: 14px;
+    }
+
+    .modal-contenido {
+        padding: 22px 17px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ENCABEZADO -->
-
 <header>
-
-<img src="logo.jpg"
-alt="Logo de Limpia Smart"
-class="logo">
-
-<h1>Limpia Smart</h1>
-
-<p>Limpieza y cuidado tecnológico</p>
-
-<p class="slogan">
-Dale nueva vida a tu tecnología
-</p>
-
+    <img src="logo.jpg" alt="Logo de Limpia Smart" class="logo">
+    <h1>Limpia Smart</h1>
+    <p>Limpieza y cuidado tecnológico</p>
+    <p class="slogan">Dale nueva vida a tu tecnología</p>
 </header>
 
-
-<!-- MENÚ -->
-
 <nav>
-
-<a href="#inicio">Inicio</a>
-
-<a href="#catalogo">Ver catálogo</a>
-
-<a href="#conocenos">Conócenos</a>
-
-<a href="#pedido">Hacer pedido</a>
-
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Ver catálogo</a>
+    <a href="#conocenos">Conócenos</a>
+    <a href="#" onclick="abrirPedido(); return false;">Hacer pedido</a>
 </nav>
 
-
-<!-- INICIO -->
-
 <section class="inicio" id="inicio">
-
-<h2>Cuida tu tecnología con Limpia Smart</h2>
-
-<p>
-Productos diseñados para ayudar a mantener limpias
-y cuidadas las superficies de tus dispositivos tecnológicos.
-</p>
-
-<a href="#catalogo" class="boton">
-Ver catálogo
-</a>
-
+    <h2>Cuida tu tecnología con Limpia Smart</h2>
+    <p>
+        Productos diseñados para ayudar a mantener limpias
+        y cuidadas las superficies de tus dispositivos tecnológicos.
+    </p>
+    <a href="#catalogo" class="boton">Ver catálogo</a>
 </section>
-
-
-<!-- CATÁLOGO -->
 
 <section class="seccion" id="catalogo">
-
-<h2 class="titulo">
-Nuestro catálogo
-</h2>
-
-
-<div class="productos">
-
-
-<!-- SPRAY PANTALLAS -->
-
-<article class="producto">
-
-<img src="Spray-pantallas.jpg"
-alt="Spray para pantallas"
-class="foto">
-
-<h3>
-Spray para pantallas
-</h3>
-
-<p>
-Aroma Turquoise Oasis.
-</p>
-
-<p class="precio">
-$75 MXN
-</p>
-
-<div class="ingredientes">
-
-<h4>
-Ingredientes
-</h4>
-
-<ul>
-
-<li>Alcohol etílico</li>
-
-<li>Agua destilada</li>
-
-<li>Esencia Turquoise Oasis</li>
-
-</ul>
-
-</div>
-
-<a href="#pedido" class="boton"
-onclick="seleccionarProducto('Spray para pantallas - $75 MXN')">
-Hacer pedido
-</a>
-
-</article>
-
-
-<!-- SPRAY DE MENTA -->
-
-<article class="producto">
-
-<img src="Spray-menta.jpg"
-alt="Spray de menta"
-class="foto">
-
-<h3>
-Spray de menta
-</h3>
-
-<p>
-Aroma fresco de menta.
-</p>
-
-<p class="precio">
-$80 MXN
-</p>
-
-<div class="ingredientes">
-
-<h4>
-Ingredientes
-</h4>
-
-<ul>
-
-<li>Alcohol etílico</li>
-
-<li>Agua destilada</li>
-
-<li>Esencia de menta</li>
-
-</ul>
-
-</div>
-
-<a href="#pedido" class="boton"
-onclick="seleccionarProducto('Spray de menta - $80 MXN')">
-Hacer pedido
-</a>
-
-</article>
-
-
-<!-- SPRAY PARA COMPUTADORAS -->
-
-<article class="producto">
-
-<div class="foto">
-
-<img src="Spray-computadoras.jpg" alt="Spray para computadoras">
-
-</div>
-
-<h3>
-Spray para computadoras
-</h3>
-
-<p>
-Aroma de eucalipto.
-</p>
-
-<p class="precio">
-$80 MXN
-</p>
-
-<div class="ingredientes">
-
-<h4>
-Ingredientes
-</h4>
-
-<ul>
-
-<li>Alcohol etílico</li>
-
-<li>Agua destilada</li>
-
-<li>Esencia de eucalipto</li>
-
-</ul>
-
-</div>
-
-<a href="#pedido" class="boton"
-onclick="seleccionarProducto('Spray para computadoras - $80 MXN')">
-Hacer pedido
-</a>
-
-</article>
-
-
-<!-- SPRAY MULTIUSO -->
-
-<article class="producto">
-
-<div class="foto">
-
-<p style="padding-top:90px;">
-Foto del spray multiuso próximamente
-</p>
-
-</div>
-
-<h3>
-Spray multiuso tecnológico
-</h3>
-
-<p>
-Aroma por definir.
-</p>
-
-<p class="precio">
-$90 MXN
-</p>
-
-<div class="ingredientes">
-
-<h4>
-Ingredientes
-</h4>
-
-<ul>
-
-<li>Alcohol etílico</li>
-
-<li>Agua destilada</li>
-
-<li>Esencia del aroma elegido</li>
-
-</ul>
-
-</div>
-
-<a href="#pedido" class="boton"
-onclick="seleccionarProducto('Spray multiuso tecnológico - $90 MXN')">
-Hacer pedido
-</a>
-
-</article>
-
-</div>
-
+    <h2 class="titulo">Nuestro catálogo</h2>
+
+    <div class="productos">
+
+        <article class="producto">
+            <img src="Spray-pantallas.jpg"
+                 alt="Spray para pantallas" class="foto">
+            <h3>Spray para pantallas</h3>
+            <p class="precio">$75 MXN</p>
+
+            <button class="boton boton-secundario"
+                onclick="verDetalle(0)">Ver detalles</button>
+
+            <button class="boton"
+                onclick="abrirPedido('Spray para pantallas - $75 MXN')">
+                Hacer pedido
+            </button>
+        </article>
+
+        <article class="producto">
+            <img src="Spray-menta.jpg"
+                 alt="Spray de menta" class="foto">
+            <h3>Spray de menta</h3>
+            <p class="precio">$80 MXN</p>
+
+            <button class="boton boton-secundario"
+                onclick="verDetalle(1)">Ver detalles</button>
+
+            <button class="boton"
+                onclick="abrirPedido('Spray de menta - $80 MXN')">
+                Hacer pedido
+            </button>
+        </article>
+
+        <article class="producto">
+            <img src="Spray-computadoras.jpg"
+                 alt="Spray para computadoras" class="foto">
+            <h3>Spray para computadoras</h3>
+            <p class="precio">$80 MXN</p>
+
+            <button class="boton boton-secundario"
+                onclick="verDetalle(2)">Ver detalles</button>
+
+            <button class="boton"
+                onclick="abrirPedido('Spray de eucalipto - $80 MXN')">
+                Hacer pedido
+            </button>
+        </article>
+
+        <article class="producto">
+            <img src="Spray-multiuso.jpg"
+                 alt="Spray multiuso tecnológico" class="foto">
+            <h3>Spray multiuso tecnológico</h3>
+            <p class="precio">$90 MXN</p>
+
+            <button class="boton boton-secundario"
+                onclick="verDetalle(3)">Ver detalles</button>
+
+            <button class="boton"
+                onclick="abrirPedido('Spray multiuso tecnológico - $90 MXN')">
+                Hacer pedido
+            </button>
+        </article>
+
+    </div>
 </section>
-
-
-<!-- CONÓCENOS -->
 
 <section class="seccion" id="conocenos">
+    <h2 class="titulo">Conócenos</h2>
 
-<h2 class="titulo">
-Conócenos
-</h2>
+    <div class="conocenos">
+        <h3>¿Qué es Limpia Smart?</h3>
 
-<div class="conocenos">
+        <p>
+            Limpia Smart es una microempresa escolar enfocada
+            en el cuidado y limpieza de dispositivos tecnológicos.
+        </p>
 
-<h3>
-¿Qué es Limpia Smart?
-</h3>
+        <p>
+            Nuestro objetivo es ofrecer productos prácticos
+            para ayudar a mantener limpias diferentes superficies
+            de los equipos electrónicos.
+        </p>
 
-<p>
-Limpia Smart es una microempresa escolar enfocada en
-el cuidado y limpieza de dispositivos tecnológicos.
-</p>
+        <div class="info-empresa">
+            <article>
+                <h3>Misión</h3>
+                <p>
+                    Ofrecer productos de limpieza para computadoras
+                    y dispositivos electrónicos que ayuden a mantenerlos
+                    en buen estado, utilizando una propuesta práctica,
+                    accesible y comprometida con el cuidado del medio ambiente.
+                </p>
+            </article>
 
-<p>
-Nuestro objetivo es ofrecer productos prácticos para
-ayudar a mantener limpias diferentes superficies de
-los equipos electrónicos.
-</p>
+            <article>
+                <h3>Visión</h3>
+                <p>
+                    Ser una microempresa reconocida por ofrecer productos
+                    de limpieza tecnológica de calidad y accesibles,
+                    buscando crecer y llegar a más personas interesadas
+                    en el cuidado de sus equipos y del medio ambiente.
+                </p>
+            </article>
+        </div>
 
-<p>
-Buscamos combinar el cuidado tecnológico con una
-propuesta sencilla, práctica y accesible.
-</p>
-
-<p>
-<strong>
-Dale nueva vida a tu tecnología.
-</strong>
-</p>
-
-</div>
-
+        <p style="text-align:center; margin-top:25px;">
+            <strong>Dale nueva vida a tu tecnología.</strong>
+        </p>
+    </div>
 </section>
-
-
-<!-- HACER PEDIDO -->
-
-<section class="seccion" id="pedido">
-
-<h2 class="titulo">
-Hacer pedido
-</h2>
-
-<div class="pedido">
-
-<form onsubmit="enviarPedido(event)">
-
-<label>
-Nombre del cliente:
-</label>
-
-<input
-type="text"
-id="nombre"
-required
-placeholder="Escribe tu nombre">
-
-
-<label>
-Producto:
-</label>
-
-<select id="producto" required>
-
-<option value="">
-Selecciona un producto
-</option>
-
-<option value="Spray para pantallas - $75 MXN">
-Spray para pantallas - $75 MXN
-</option>
-
-<option value="Spray de menta - $80 MXN">
-Spray de menta - $80 MXN
-</option>
-
-<option value="Spray para computadoras - $80 MXN">
-Spray de eucalipto - $80 MXN
-</option>
-
-<option value="Spray multiuso tecnológico - $90 MXN">
-Spray multiuso tecnológico - $90 MXN
-</option>
-
-</select>
-
-
-<label>
-Cantidad:
-</label>
-
-<input
-type="number"
-id="cantidad"
-min="1"
-value="1"
-required>
-
-
-<label>
-Comentario:
-</label>
-
-<textarea
-id="comentario"
-rows="4"
-placeholder="Escribe algún comentario adicional">
-</textarea>
-
-
-<button
-type="submit"
-class="boton">
-
-Enviar pedido por WhatsApp
-
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-
-<!-- CONTACTO -->
 
 <section class="contacto">
-
-<h2>
-¿Tienes alguna duda?
-</h2>
-
-<p>
-Escríbenos directamente por WhatsApp.
-</p>
-
-<a
-class="boton"
-href="https://wa.me/527203553006"
-target="_blank"
-rel="noopener">
-
-Contactar por WhatsApp
-
-</a>
-
+    <h2>¿Tienes alguna duda?</h2>
+    <p>Escríbenos directamente por WhatsApp.</p>
+    <a class="boton"
+       href="https://wa.me/527203553006"
+       target="_blank" rel="noopener">
+       Contactar por WhatsApp
+    </a>
 </section>
 
-
-<!-- PIE -->
-
 <footer>
-
-<p>
-Limpia Smart © 2026
-</p>
-
-<p>
-Dale nueva vida a tu tecnología
-</p>
-
+    <p>Limpia Smart © 2026</p>
+    <p>Dale nueva vida a tu tecnología</p>
 </footer>
 
+<!-- VENTANA DE DETALLES -->
+
+<div class="modal" id="modalDetalle"
+     onclick="cerrarSiFondo(event, 'modalDetalle')">
+    <div class="modal-contenido">
+        <button class="cerrar"
+            onclick="cerrarModal('modalDetalle')"
+            aria-label="Cerrar">&times;</button>
+
+        <img id="detalleImagen" class="detalle-imagen" src=""
+             alt="Fotografía del producto">
+
+        <h2 id="detalleNombre"></h2>
+        <p id="detalleAroma"></p>
+        <p id="detallePrecio" class="precio"></p>
+
+        <h3>Ingredientes</h3>
+        <ul id="detalleIngredientes"></ul>
+
+        <button class="boton" id="detallePedido">
+            Hacer pedido
+        </button>
+    </div>
+</div>
+
+<!-- VENTANA DEL FORMULARIO -->
+
+<div class="modal" id="modalPedido"
+     onclick="cerrarSiFondo(event, 'modalPedido')">
+    <div class="modal-contenido pedido">
+        <button class="cerrar"
+            onclick="cerrarModal('modalPedido')"
+            aria-label="Cerrar">&times;</button>
+
+        <h2>Realizar pedido</h2>
+
+        <form onsubmit="enviarPedido(event)">
+            <label for="nombre">Nombre del cliente:</label>
+            <input type="text" id="nombre"
+                   placeholder="Escribe tu nombre" required>
+
+            <label for="producto">Producto:</label>
+            <select id="producto" required>
+                <option value="">Selecciona un producto</option>
+                <option value="Spray para pantallas - $75 MXN">
+                    Spray para pantallas - $75 MXN
+                </option>
+                <option value="Spray de menta - $80 MXN">
+                    Spray de menta - $80 MXN
+                </option>
+                <option value="Spray de eucalipto - $80 MXN">
+                    Spray de eucalipto - $80 MXN
+                </option>
+                <option value="Spray multiuso tecnológico - $90 MXN">
+                    Spray multiuso tecnológico - $90 MXN
+                </option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad"
+                   min="1" value="1" required>
+
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" rows="3"
+                placeholder="Escribe algún comentario adicional"></textarea>
+
+            <button type="submit" class="boton">
+                Enviar pedido por WhatsApp
+            </button>
+        </form>
+    </div>
+</div>
 
 <script>
+const productos = [
+    {
+        nombre: "Spray para pantallas",
+        imagen: "Spray-pantallas.jpg",
+        aroma: "Turquoise Oasis",
+        precio: "$75 MXN",
+        ingredientes: [
+            "Alcohol etílico",
+            "Agua destilada",
+            "Esencia Turquoise Oasis"
+        ],
+        pedido: "Spray para pantallas - $75 MXN"
+    },
+    {
+        nombre: "Spray de menta",
+        imagen: "Spray-menta.jpg",
+        aroma: "Menta",
+        precio: "$80 MXN",
+        ingredientes: [
+            "Alcohol etílico",
+              "Agua destilada",
+            "Esencia de menta"
+        ],
+        pedido: "Spray de menta - $80 MXN"
+    },
+    {
+        nombre: "Spray para computadoras",
+        imagen: "Spray-computadoras.jpg",
+        aroma: "Eucalipto",
+        precio: "$80 MXN",
+        ingredientes: [
+            "Alcohol etílico",
+            "Agua destilada",
+            "Esencia de eucalipto"
+        ],
+        pedido: "Spray de eucalipto - $80 MXN"
+    },
+    {
+        nombre: "Spray multiuso tecnológico",
+        imagen: "Spray-multiuso.jpg",
+        aroma: "Por definir",
+        precio: "$90 MXN",
+        ingredientes: [
+            "Alcohol etílico",
+            "Agua destilada",
+            "Esencia del aroma elegido"
+        ],
+        pedido: "Spray multiuso tecnológico - $90 MXN"
+    }
+];
 
-function seleccionarProducto(producto) {
+function verDetalle(indice) {
+    const p = productos[indice];
 
-document.getElementById("producto").value = producto;
+    document.getElementById("detalleImagen").src = p.imagen;
+    document.getElementById("detalleNombre").textContent = p.nombre;
+    document.getElementById("detalleAroma").textContent =
+        "Aroma: " + p.aroma;
+    document.getElementById("detallePrecio").textContent = p.precio;
 
+    const lista = document.getElementById("detalleIngredientes");
+    lista.innerHTML = "";
+
+    p.ingredientes.forEach(function(ingrediente) {
+        const li = document.createElement("li");
+        li.textContent = ingrediente;
+        lista.appendChild(li);
+    });
+
+    document.getElementById("detallePedido").onclick = function() {
+        cerrarModal("modalDetalle");
+        abrirPedido(p.pedido);
+    };
+
+    document.getElementById("modalDetalle").classList.add("activo");
+}
+
+function abrirPedido(producto) {
+    const selector = document.getElementById("producto");
+    selector.value = producto || "";
+
+    document.getElementById("modalPedido").classList.add("activo");
+}
+
+function cerrarModal(id) {
+    document.getElementById(id).classList.remove("activo");
+}
+
+function cerrarSiFondo(event, id) {
+    if (event.target.id === id) {
+        cerrarModal(id);
+    }
 }
 
 function enviarPedido(event) {
+    event.preventDefault();
 
-event.preventDefault();
+    const nombre = document.getElementById("nombre").value.trim();
+    const producto = document.getElementById("producto").value;
+    const cantidad = document.getElementById("cantidad").value;
+    const comentario = document.getElementById("comentario").value.trim();
 
-var nombre =
-document.getElementById("nombre").value;
+    if (!producto || !nombre || Number(cantidad) < 1) {
+        alert("Revisa los datos de tu pedido.");
+        return;
+    }
 
-var producto =
-document.getElementById("producto").value;
+    const mensaje =
+        "Hola, quiero realizar un pedido de Limpia Smart.\n\n" +
+        "Producto: " + producto + "\n" +
+        "Nombre: " + nombre + "\n" +
+        "Cantidad: " + cantidad + "\n" +
+        "Comentario: " + (comentario || "Sin comentarios");
 
-var cantidad =
-document.getElementById("cantidad").value;
+    const enlace =
+        "https://wa.me/527203553006?text=" +
+        encodeURIComponent(mensaje);
 
-var comentario =
-document.getElementById("comentario").value;
-
-if (producto === "") {
-
-alert("Selecciona un producto.");
-
-return;
-
+    window.location.href = enlace;
 }
-
-var mensaje =
-"Hola, quiero realizar un pedido de Limpia Smart.\n\n" +
-"Producto: " + producto + "\n" +
-"Nombre: " + nombre + "\n" +
-"Cantidad: " + cantidad + "\n" +
-"Comentario: " + comentario;
-
-var enlace =
-"https://wa.me/527203553006?text=" +
-encodeURIComponent(mensaje);
-
-window.open(enlace, "_blank");
-
-}
-
 </script>
 
 </body>
