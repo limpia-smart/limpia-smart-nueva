@@ -247,7 +247,7 @@ footer {
 .modal-contenido h2 {
     color: #087ac1;
     text-align: center;
-    margin-top: 10px;
+      margin-top: 10px;
 }
 
 .cerrar {
@@ -267,6 +267,19 @@ footer {
     object-fit: contain;
     background: #f4f8fc;
     border-radius: 12px;
+}
+
+.detalle-info {
+    line-height: 1.7;
+}
+
+.detalle-info h3 {
+    color: #087ac1;
+    margin-bottom: 6px;
+}
+
+.detalle-info p {
+    margin-top: 5px;
 }
 
 .pedido label {
@@ -383,11 +396,15 @@ footer {
         <article class="producto">
             <img src="Spray-pantallas.jpg"
                  alt="Spray para pantallas" class="foto">
+
             <h3>Spray para pantallas</h3>
+
             <p class="precio">$75 MXN</p>
 
             <button class="boton boton-secundario"
-                onclick="verDetalle(0)">Ver detalles</button>
+                onclick="verDetalle(0)">
+                Ver detalles
+            </button>
 
             <button class="boton"
                 onclick="abrirPedido('Spray para pantallas - $75 MXN')">
@@ -395,14 +412,18 @@ footer {
             </button>
         </article>
 
+
         <article class="producto">
             <img src="Spray-menta.jpg"
                  alt="Spray de menta" class="foto">
-            <h3>Spray de menta</h3>
+ <h3>Spray de menta</h3>
+
             <p class="precio">$80 MXN</p>
 
             <button class="boton boton-secundario"
-                onclick="verDetalle(1)">Ver detalles</button>
+                onclick="verDetalle(1)">
+                Ver detalles
+            </button>
 
             <button class="boton"
                 onclick="abrirPedido('Spray de menta - $80 MXN')">
@@ -410,29 +431,39 @@ footer {
             </button>
         </article>
 
+
         <article class="producto">
             <img src="Spray-computadoras.jpg"
                  alt="Spray para computadoras" class="foto">
+
             <h3>Spray para computadoras</h3>
+
             <p class="precio">$80 MXN</p>
 
             <button class="boton boton-secundario"
-                onclick="verDetalle(2)">Ver detalles</button>
+                onclick="verDetalle(2)">
+                Ver detalles
+            </button>
 
             <button class="boton"
-                onclick="abrirPedido('Spray de eucalipto - $80 MXN')">
+                onclick="abrirPedido('Spray para computadoras - $80 MXN')">
                 Hacer pedido
             </button>
         </article>
 
+
         <article class="producto">
             <img src="Spray-multiuso.jpg"
                  alt="Spray multiuso tecnológico" class="foto">
+
             <h3>Spray multiuso tecnológico</h3>
+
             <p class="precio">$90 MXN</p>
 
             <button class="boton boton-secundario"
-                onclick="verDetalle(3)">Ver detalles</button>
+                onclick="verDetalle(3)">
+                Ver detalles
+            </button>
 
             <button class="boton"
                 onclick="abrirPedido('Spray multiuso tecnológico - $90 MXN')">
@@ -447,6 +478,7 @@ footer {
     <h2 class="titulo">Conócenos</h2>
 
     <div class="conocenos">
+
         <h3>¿Qué es Limpia Smart?</h3>
 
         <p>
@@ -461,8 +493,10 @@ footer {
         </p>
 
         <div class="info-empresa">
+
             <article>
                 <h3>Misión</h3>
+
                 <p>
                     Ofrecer productos de limpieza para computadoras
                     y dispositivos electrónicos que ayuden a mantenerlos
@@ -473,6 +507,7 @@ footer {
 
             <article>
                 <h3>Visión</h3>
+
                 <p>
                     Ser una microempresa reconocida por ofrecer productos
                     de limpieza tecnológica de calidad y accesibles,
@@ -480,223 +515,423 @@ footer {
                     en el cuidado de sus equipos y del medio ambiente.
                 </p>
             </article>
+
         </div>
 
         <p style="text-align:center; margin-top:25px;">
             <strong>Dale nueva vida a tu tecnología.</strong>
         </p>
+
     </div>
 </section>
-
 <section class="contacto">
+
     <h2>¿Tienes alguna duda?</h2>
-    <p>Escríbenos directamente por WhatsApp.</p>
+
+    <p>
+        Escríbenos directamente por WhatsApp.
+    </p>
+
     <a class="boton"
        href="https://wa.me/527203553006"
-       target="_blank" rel="noopener">
+       target="_blank"
+       rel="noopener">
        Contactar por WhatsApp
     </a>
+
 </section>
 
 <footer>
+
     <p>Limpia Smart © 2026</p>
+
     <p>Dale nueva vida a tu tecnología</p>
+
 </footer>
+
 
 <!-- VENTANA DE DETALLES -->
 
-<div class="modal" id="modalDetalle"
+<div class="modal"
+     id="modalDetalle"
      onclick="cerrarSiFondo(event, 'modalDetalle')">
+
     <div class="modal-contenido">
+
         <button class="cerrar"
             onclick="cerrarModal('modalDetalle')"
-            aria-label="Cerrar">&times;</button>
+            aria-label="Cerrar">
+            &times;
+        </button>
 
-        <img id="detalleImagen" class="detalle-imagen" src=""
+        <img id="detalleImagen"
+             class="detalle-imagen"
+             src=""
              alt="Fotografía del producto">
 
         <h2 id="detalleNombre"></h2>
+
         <p id="detalleAroma"></p>
-        <p id="detallePrecio" class="precio"></p>
 
-        <h3>Ingredientes</h3>
-        <ul id="detalleIngredientes"></ul>
+        <p id="detallePrecio"
+           class="precio"></p>
 
-        <button class="boton" id="detallePedido">
+
+        <div class="detalle-info">
+
+            <h3>¿Para qué sirve?</h3>
+
+            <p id="detalleUso"></p>
+
+
+            <h3>Ingredientes</h3>
+
+            <ul id="detalleIngredientes"></ul>
+
+
+            <h3>Recomendación</h3>
+
+            <p id="detalleRecomendacion"></p>
+
+
+            <h3>Modo de uso</h3>
+
+            <p id="detalleModo"></p>
+
+        </div>
+
+
+        <button class="boton"
+                id="detallePedido">
             Hacer pedido
         </button>
+
     </div>
 </div>
+
 
 <!-- VENTANA DEL FORMULARIO -->
 
-<div class="modal" id="modalPedido"
+<div class="modal"
+     id="modalPedido"
      onclick="cerrarSiFondo(event, 'modalPedido')">
+
     <div class="modal-contenido pedido">
+
         <button class="cerrar"
             onclick="cerrarModal('modalPedido')"
-            aria-label="Cerrar">&times;</button>
+            aria-label="Cerrar">
+            &times;
+        </button>
 
         <h2>Realizar pedido</h2>
 
-        <form onsubmit="enviarPedido(event)">
-            <label for="nombre">Nombre del cliente:</label>
-            <input type="text" id="nombre"
-                   placeholder="Escribe tu nombre" required>
 
-            <label for="producto">Producto:</label>
+        <form onsubmit="enviarPedido(event)">
+
+            <label for="nombre">
+                Nombre del cliente:
+            </label>
+
+            <input type="text"
+                   id="nombre"
+                   placeholder="Escribe tu nombre"
+                   required>
+
+
+            <label for="producto">
+                Producto:
+            </label>
+
             <select id="producto" required>
-                <option value="">Selecciona un producto</option>
+
+                <option value="">
+                    Selecciona un producto
+                </option>
+
                 <option value="Spray para pantallas - $75 MXN">
                     Spray para pantallas - $75 MXN
                 </option>
+
                 <option value="Spray de menta - $80 MXN">
                     Spray de menta - $80 MXN
                 </option>
-                <option value="Spray de eucalipto - $80 MXN">
-                    Spray de eucalipto - $80 MXN
+
+                <option value="Spray para computadoras - $80 MXN">
+                    Spray para computadoras - $80 MXN
                 </option>
+
                 <option value="Spray multiuso tecnológico - $90 MXN">
                     Spray multiuso tecnológico - $90 MXN
                 </option>
+
             </select>
 
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad"
-                   min="1" value="1" required>
 
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" rows="3"
-                placeholder="Escribe algún comentario adicional"></textarea>
+            <label for="cantidad">
+                Cantidad:
+            </label>
 
-            <button type="submit" class="boton">
+            <input type="number"
+                   id="cantidad"
+                 min="1"
+                   value="1"
+                   required>
+
+
+            <label for="comentario">
+                Comentario:
+            </label>
+
+            <textarea id="comentario"
+                      rows="3"
+                      placeholder="Escribe algún comentario adicional">
+            </textarea>
+
+
+            <button type="submit"
+                    class="boton">
                 Enviar pedido por WhatsApp
             </button>
+
         </form>
+
     </div>
 </div>
 
+
 <script>
+
 const productos = [
+
     {
         nombre: "Spray para pantallas",
         imagen: "Spray-pantallas.jpg",
         aroma: "Turquoise Oasis",
         precio: "$75 MXN",
+
+        uso: "Producto diseñado para ayudar a mantener limpias las superficies de las pantallas y eliminar suciedad y marcas de uso.",
+
         ingredientes: [
             "Alcohol etílico",
             "Agua destilada",
             "Esencia Turquoise Oasis"
         ],
+
+        recomendacion: "Se recomienda utilizarlo con un paño de microfibra limpio y suave para evitar rayones.",
+
+        modo: "Aplicar una pequeña cantidad sobre el paño de microfibra y limpiar suavemente la superficie. No aplicar directamente sobre el dispositivo.",
+
         pedido: "Spray para pantallas - $75 MXN"
     },
+
+
     {
         nombre: "Spray de menta",
         imagen: "Spray-menta.jpg",
         aroma: "Menta",
         precio: "$80 MXN",
+
+        uso: "Producto pensado para la limpieza de superficies de dispositivos tecnológicos, dejando un aroma fresco a menta.",
+
         ingredientes: [
             "Alcohol etílico",
-              "Agua destilada",
+            "Agua destilada",
             "Esencia de menta"
         ],
+
+        recomendacion: "Se recomienda utilizarlo con un paño de microfibra para realizar una limpieza uniforme.",
+
+        modo: "Aplicar una pequeña cantidad sobre el paño de microfibra y limpiar suavemente la superficie. No aplicar directamente sobre el dispositivo.",
+
         pedido: "Spray de menta - $80 MXN"
     },
+
+
     {
         nombre: "Spray para computadoras",
         imagen: "Spray-computadoras.jpg",
-        aroma: "Eucalipto",
+        aroma: "Pink Aura",
         precio: "$80 MXN",
+
+        uso: "Producto diseñado para ayudar a mantener limpias las superficies exteriores de las computadoras y sus accesorios.",
+
         ingredientes: [
             "Alcohol etílico",
             "Agua destilada",
-            "Esencia de eucalipto"
+            "Esencia Pink Aura"
         ],
-        pedido: "Spray de eucalipto - $80 MXN"
+
+        recomendacion: "Se recomienda usarlo con un paño de microfibra y limpiar con movimientos suaves.",
+
+        modo: "Aplicar una pequeña cantidad sobre el paño de microfibra y limpiar suavemente la superficie exterior. No aplicar directamente sobre el equipo.",
+
+        pedido: "Spray para computadoras - $80 MXN"
     },
+
+
     {
         nombre: "Spray multiuso tecnológico",
         imagen: "Spray-multiuso.jpg",
-        aroma: "Por definir",
+        aroma: "Green Energy",
         precio: "$90 MXN",
+
+        uso: "Producto pensado para apoyar la limpieza de diferentes superficies exteriores de dispositivos tecnológicos.",
+
         ingredientes: [
             "Alcohol etílico",
             "Agua destilada",
-            "Esencia del aroma elegido"
+            "Esencia Green Energy"
         ],
+
+        recomendacion: "Se recomienda utilizarlo con un paño de microfibra limpio para obtener una limpieza uniforme.",
+
+        modo: "Aplicar una pequeña cantidad sobre el paño de microfibra y limpiar suavemente la superficie. No aplicar directamente sobre el dispositivo.",
+
         pedido: "Spray multiuso tecnológico - $90 MXN"
     }
+
 ];
 
+
 function verDetalle(indice) {
+
     const p = productos[indice];
 
     document.getElementById("detalleImagen").src = p.imagen;
-    document.getElementById("detalleNombre").textContent = p.nombre;
+
+    document.getElementById("detalleNombre").textContent =
+        p.nombre;
+
     document.getElementById("detalleAroma").textContent =
         "Aroma: " + p.aroma;
-    document.getElementById("detallePrecio").textContent = p.precio;
 
-    const lista = document.getElementById("detalleIngredientes");
+    document.getElementById("detallePrecio").textContent =
+        p.precio;
+
+    document.getElementById("detalleUso").textContent =
+        p.uso;
+
+    document.getElementById("detalleRecomendacion").textContent =
+        p.recomendacion;
+
+    document.getElementById("detalleModo").textContent =
+        p.modo;
+
+
+    const lista =
+        document.getElementById("detalleIngredientes");
+
     lista.innerHTML = "";
 
+
     p.ingredientes.forEach(function(ingrediente) {
+
         const li = document.createElement("li");
+
         li.textContent = ingrediente;
+
         lista.appendChild(li);
+
     });
 
-    document.getElementById("detallePedido").onclick = function() {
-        cerrarModal("modalDetalle");
-        abrirPedido(p.pedido);
-    };
 
-    document.getElementById("modalDetalle").classList.add("activo");
+    document.getElementById("detallePedido").onclick =
+        function() {
+
+            cerrarModal("modalDetalle");
+
+            abrirPedido(p.pedido);
+
+        };
+
+
+    document.getElementById("modalDetalle")
+        .classList.add("activo");
 }
+
 
 function abrirPedido(producto) {
-    const selector = document.getElementById("producto");
-    selector.value = producto || "";
 
-    document.getElementById("modalPedido").classList.add("activo");
+    const selector =
+        document.getElementById("producto");
+
+    selector.value =
+        producto || "";
+
+    document.getElementById("modalPedido")
+        .classList.add("activo");
 }
+
 
 function cerrarModal(id) {
-    document.getElementById(id).classList.remove("activo");
+
+    document.getElementById(id)
+        .classList.remove("activo");
 }
+
 
 function cerrarSiFondo(event, id) {
+
     if (event.target.id === id) {
+
         cerrarModal(id);
+
     }
+
 }
 
+
 function enviarPedido(event) {
+
     event.preventDefault();
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const producto = document.getElementById("producto").value;
-    const cantidad = document.getElementById("cantidad").value;
-    const comentario = document.getElementById("comentario").value.trim();
+    const nombre =
+        document.getElementById("nombre")
+        .value.trim();
 
-    if (!producto || !nombre || Number(cantidad) < 1) {
+    const producto =
+        document.getElementById("producto")
+        .value;
+
+    const cantidad =
+        document.getElementById("cantidad")
+        .value;
+
+    const comentario =
+        document.getElementById("comentario")
+        .value.trim();
+
+
+    if (!producto ||
+        !nombre ||
+        Number(cantidad) < 1) {
+
         alert("Revisa los datos de tu pedido.");
+
         return;
+
     }
+
 
     const mensaje =
         "Hola, quiero realizar un pedido de Limpia Smart.\n\n" +
         "Producto: " + producto + "\n" +
         "Nombre: " + nombre + "\n" +
         "Cantidad: " + cantidad + "\n" +
-        "Comentario: " + (comentario || "Sin comentarios");
+        "Comentario: " +
+        (comentario || "Sin comentarios");
+
 
     const enlace =
         "https://wa.me/527203553006?text=" +
         encodeURIComponent(mensaje);
 
+
     window.location.href = enlace;
+
 }
+
 </script>
 
 </body>
